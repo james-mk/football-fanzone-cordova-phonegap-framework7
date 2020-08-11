@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+
+    <title>Football Fan Zone</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/footie.css">
+    <style>
+        .customOverlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(46, 47, 49, 0.56);
+            color: #ffffff;
+        }
+        
+        #ucl {
+            background-color: #E6E6EA;
+        }
+        
+        #index {
+            background-image: url('img/img1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .page {
+            /*background-color: #111111;*/
+            background-color: #2E4057;
+            background-image: url('img/img3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .tresult {
+            background-color: #006E90;
+            padding: 3px;
+            color: #ffffff;
+            box-shadow: 2px 2px 5px #292929;
+            text-align: left;
+        }
+        
+        .dom {
+            color: aliceblue;
+        }
+        
+        .hero {
+            color: aliceblue;
+            text-align: center;
+        }
+        
+        .hero p {
+            background-color: #E6E6EA !important;
+            padding: 5px;
+            box-shadow: 2px 2px 5px #292929;
+            text-align: center;
+            color: #006E90;
+            border-radius: 10px;
+        }
+        
+        #panel-logo {
+            background-image: url('img/logo.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 200px;
+        }
+        
+        .page-content {
+            padding: 10px;
+            margin-top: 5px;
+        }
+        
+        #cp {
+            color: #006e90;
+        }
+        
+        div.navbar,
+        div.toolbar {
+            background-color: #2E4057 !important;
+        }
+        
+        .item-link {
+            background-color: #364156 !important;
+        }
+        
+        div.item-title {
+            color: #adcad6;
+        }
+        
+        #btn {
+            background-color: #FE4A49;
+        }
+        
+        .floating-button {
+            background-color: #f18f01 !important;
+        }
+        
+        .tab-link {
+            color: yellow !important;
+        }
+        
+        .active {
+            color: #ffffff !important;
+        }
+        
+        .fpl {
+            color: yellow !important;
+        }
+        
+        #fphero {
+            text-align: center;
+            color: #ffffff;
+            padding: 10px;
+        }
+        
+        #contact_details {
+            background-color: #E6E6EA;
+            padding: 10px;
+            text-align: center;
+            color: #006E90;
+            border-radius: 15px;
+        }
+        
+        .result_div {
+            padding: 10px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .result_div p {
+            color: #ffffff;
+        }
+        
+        .list-header {
+            background-color: #FE4A49 !important;
+            text-align: center;
+            color: #fff !important;
+        }
+        
+        .ppolicy {
+            background-color: #E6E6EA !important;
+            color: #ffffff;
+        }
+        
+        .main_card {
+            opacity: 0.8;
+        }
+    </style>
+
+</head>
+
+<body id="body" class="theme-green">
+
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+        <div class="card"></div>
+        <div class="content-block-title">
+            <h3>Football Fan Zone</h3>
+        </div>
+
+        <div id="panel-logo"></div>
+
+
+        <div class="list-block">
+
+            <ul>
+                <li class="list-group-title list-header">SEND FEEDBACK</li>
+                <li>
+                    <li>
+                        <a href="#" class="item-link item-content external" id="call">
+                            <div class="item-media">
+                                <img src="icons/ic_phone_android_black_24dp.png" width="22" height="22">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Call</div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="item-link item-content external" id="email">
+                            <div class="item-media">
+                                <img src="icons/ic_mail_black_24dp.png" width="22" height="22">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Email</div>
+                            </div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#" class="item-link item-content external" id="surf">
+                            <div class="item-media">
+                                <img src="icons/ic_web_black_24dp.png" width="22" height="22">
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title">Visit Website</div>
+                            </div>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+
+
+        <div class="content-block">
+            <p id="cp">&copy; 2019 v2.0.0 <br /> Developed (with lots of love) by Insites Digital Marketing <br /><br />Football data provided by the Football-Data.org API
+            </p>
+        </div>
+
+        <div class="list-block">
+            <ul>
+
+                <li>
+                    <a href="ppolicy.html" class="item-link item-content">
+                        <div class="item-inner">
+                            <div class="item-title">Privacy Policy</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!--views-->
+    <div class="views">
+        <div class="view view-main">
+            <div class="pages navbar-fixed toolbar-fixed">
+                <div class="page" data-page="index" id="index">
+                    <div id="hp_overlay"></div>
+
+                    <div class="navbar" id="jay">
+                        <div class="navbar-inner">
+                            <div class="left sliding">
+                                <!--left navbar icon-->
+                                <!-- Right link contains only icon - additional "icon-only" class-->
+                                <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+                            </div>
+                            <div class="center">Football Fan Zone</div>
+                            <div class="right">
+
+
+                            </div>
+
+                        </div>
+                        <!--navbar-inner-->
+                    </div>
+                    <!--navbar-->
+
+                    <div class="toolbar tabbar">
+                        <div class="toolbar-inner">
+                            <a href="#tab1" class="active tab-link"><img src="icons/home_white.png" width="22" height="22"></a>
+                            <a href="#tab2" class="tab-link">ENG</a>
+                            <a href="#tab3" class="tab-link">ESP</a>
+                            <a href="#tab4" class="tab-link">ITL</a>
+                            <a href="#tab5" class="tab-link">GER</a>
+                            <a href="#tab6" class="tab-link">FR</a>
+
+
+                        </div>
+                    </div>
+                    <!--toolbar-->
+                    <div class="floating-button fab-right-bottom">
+                        <a href="#" id="share">
+                            <img src="icons/baseline_share_white_18dp.png" height="22" width="22" align="center">
+                        </a>
+                    </div>
+
+                    <div class="tabs-swipeable-wrap">
+                        <div class="tabs">
+                            <div id="tab1" class="page-content tab active">
+
+
+                                <div class="content-block">
+                                    <div id="fphero">
+
+                                        <h1>FOR THE LOVE OF THE GAME</h1>
+                                        <p>Fixtures | Results | Table Standings | Team &amp; Player Profiles</p>
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+                                <div class="card main_card">
+
+                                    <div class="list-block">
+                                        <ul>
+                                            <li class="list-group-title list-header">TOP EUROPEAN LEAGUES</li>
+                                            <li>
+                                                <a href="epl.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">English Premier League</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="laliga.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title"> Spanish La Liga</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="serie_a.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Italian Serie A</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="bundesliga.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">German Bundesliga</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="ligue_1.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">French Ligue 1</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div id="tab2" class="page-content tab">
+
+
+
+
+                                <div class="card main_card">
+
+                                    <div class="list-block">
+                                        <ul>
+                                            <li class="list-group-title list-header">TOP ENGLISH TEAMS</li>
+                                            <li>
+                                                <a href="England/arsenal.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Arsenal</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="England/chelsea.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Chelsea</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="England/liverpool.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Liverpool</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="England/man_city.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Manchester City</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="England/man_united.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Manchester United</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="England/tottenham.html" class="item-link item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title">Tottenham</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+
+
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div id="tab3" class="page-content tab">
+
+
+                                <div class="card main_card">
+
+                                    <div class="list-block">
+                                        <ul>
+                                            <li class="list-group-title list-header">TOP SPANISH TEAMS</li>
+                                            <li>
+                                                <li>
+                                                    <a href="spain/barcelona.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Barcelona</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="spain/real_madrid.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Real Madrid</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="spain/atletico_madrid.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Atletico Madrid</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="spain/sevilla.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Sevilla</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="spain/villareal.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Villareal</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div id="tab4" class="page-content tab">
+
+
+                                <div class="card main_card">
+
+                                    <div class="list-block">
+                                        <ul>
+                                            <li class="list-group-title list-header">TOP ITALIAN TEAMS</li>
+                                            <li>
+                                                <li>
+                                                    <a href="italy/juventus.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Juventus</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="italy/napoli.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Napoli</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="italy/roma.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Roma</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="italy/lazio.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Lazio</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="italy/inter_milan.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Inter Milan</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="italy/ac_milan.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">AC Milan</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div id="tab5" class="page-content tab">
+
+
+                                <div class="card main_card">
+
+                                    <div class="list-block">
+                                        <ul>
+                                            <li class="list-group-title list-header">TOP GERMAN TEAMS</li>
+                                            <li>
+                                                <li>
+                                                    <a href="germany/bayern_munich.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Bayern Munich</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="germany/dortmund.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Borussia Dortmund</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
+
+
+                            </div>
+                            <div id="tab6" class="page-content tab">
+
+
+                                <div class="card main_card">
+
+                                    <div class="list-block">
+                                        <ul>
+                                            <li class="list-group-title list-header">TOP FRENCH TEAMS</li>
+                                            <li>
+                                                <li>
+                                                    <a href="france/psg.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Paris St Germain</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="france/lyon.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Lyon</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="france/monaco.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Monaco</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="france/marseille.html" class="item-link item-content">
+                                                        <div class="item-inner">
+                                                            <div class="item-title">Marseille</div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+
+
+
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <!--data-page="index"-->
+            </div>
+            <!--pages-->
+
+        </div>
+        <!--view view-main-->
+    </div>
+    <!--views-->
+    <script type="text/javascript" src="js/standings.js"></script>
+    <script type="text/javascript" src="js/squads.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/previousgames.js"></script>
+    <script type="text/javascript" src="js/push.js"></script>
+    <script type="text/javascript" src="js/leagues.js"></script>
+    <script type="text/javascript" src="js/func.js"></script>
+    <script type="text/javascript" src="js/teams.js"></script>
+    <script type="text/javascript" src="js/share.js"></script>
+    <script type="text/javascript" src="js/upcoming.js"></script>
+
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+</body>
+
+</html>

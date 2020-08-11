@@ -1,0 +1,51 @@
+    var url = "http://api.football-data.org/v1/competitions/467/leagueTable";
+          
+  
+             console.log(url);
+            
+              xmlhttp= new XMLHttpRequest();
+              xmlhttp.onreadystatechange = getData;
+              xmlhttp.open("get",url, true);
+              xmlhttp.setRequestHeader ("X-Auth-Token", "9642770883cd4f5d8d1f288cc1ab8152");
+              xmlhttp.send();
+
+      
+        function getData() {
+                                   
+                 if(xmlhttp.readyState==4 && xmlhttp.status==200) {
+                     
+                  
+                    var response =JSON.parse(xmlhttp.responseText);
+          
+                        console.log(response);
+                     
+                    
+                    
+                            
+                    var output ="";
+                    for(i=0;i<response.length;i++) {
+                       
+                        let day = fix[i].matchday;
+                        let matchdate = fix[i].date;
+                        let homeTeam = fix[i].homeTeamname;
+                        let awayTeam = fix[i].awayTeamName;
+                        let state = fix[i].status;
+                        
+                        //Results
+                        let
+                   
+                        
+                     
+                            }
+                        
+  
+                     document.getElementById('display_plf').insertAdjacentHTML('beforeend', output);
+
+                     
+                     
+                     
+                 }
+        }
+                        
+               
+        

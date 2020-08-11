@@ -1,0 +1,5 @@
+keytool -genkey -v -keystore footie.keystore -alias footie -keyalg RSA -keysize 2048 -validity 10000
+
+name:footie
+alias:footie
+pswd:Geek5756
